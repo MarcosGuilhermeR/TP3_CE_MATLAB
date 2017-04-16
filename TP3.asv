@@ -1,0 +1,22 @@
+
+clc;
+
+global N; %Número de indivíduos
+
+N = 20;
+
+
+    population = generate_initial_population (N);
+    
+for i=1: 5   
+    population = evaluate_population (population);
+    
+    population = generate_new_population (population, N);
+    
+
+ if (i % 2 == 0)
+     
+end
+
+
+
