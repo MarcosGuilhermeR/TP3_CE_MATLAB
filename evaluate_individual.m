@@ -9,13 +9,9 @@ function individual = evaluate_individual (individual)
 end
 
 function y = f1(individual)
-% MYMEAN Example of a local function.
     y = individual.x ^ 2;
-
 end
 
 function y = f2(individual)
-% MYMEAN Example of a local function.
     y = (individual.x - 2) ^ 2;
-
 end

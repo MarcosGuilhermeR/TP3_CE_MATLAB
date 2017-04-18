@@ -2,7 +2,6 @@ function population = generate_new_population (population, N)
 
     n = size(population);
     n = n(2);
-    %pop_size = 0;
     
     for i=1 : n
        ind_noise = difference_and_mutation (population, i);
@@ -10,11 +9,12 @@ function population = generate_new_population (population, N)
        
        population = select_better_individual(population, i, ind_noise);
        
-       
     end
     
+    %Trunca
     population = population(1:N);
-       
+    
+    %embaralha
     ix = randperm(n);
     population = population(ix);
 
@@ -54,5 +54,11 @@ function ind_noise = difference_and_mutation (population, i)
     
     ind_noise = Individual();
     ind_noise.x = vet_difference_pond + ind3.x;
+    
+    if (ind_noise.x < -15)
+       ind_noise.x = -15; 
+    elseif (ind_noise.x > 17)
+       ind_noise.x = 17; 
+    end
     
 end
