@@ -3,7 +3,7 @@ clc;
 
 global N; %Número de indivíduos
 
-N = 100;
+N = 20;
 
 
 population = generate_initial_population (N);
@@ -12,7 +12,7 @@ population = evaluate_population (population);
 x = zeros(1,N);
 y = zeros(1,N);
 figure;
-for i=1: 50
+for i=1: 100
    
     population = generate_new_population (population, N);
     
